@@ -23,7 +23,7 @@ public class planets {
     public Integer getDistance() {
         return this.distance;
     }
-    
+
     public float getAngle() {
         return this.angle;
     }
