@@ -1,23 +1,22 @@
-public class Moons{
-    private Integer distance;
+public class moons {
+    private Integer distanceFromPlanet;
     private float speed;
     private Integer diameter;
     private String color;
     private float angle;
-    
 
-    Moons(Integer Distance,float Speed,Integer Diameter,String Color){
-        this.distance = Distance;
-        this.speed =  Speed;
-        this.diameter = Diameter;
-        this.color = Color;
-        this.angle =0;
-
-    }
-    public void Update_Moon(SolarSystem milkyway){
-        this.angle = angle +(1*speed)/10;
-        // Update this with the angle and distance of the planet that it orbits.
-        milkyway.drawSolarObjectAbout(distance, angle, diameter,color);
+    public moons(Integer distanceFromPlanet, float speed, Integer diameter, String color) {
+        this.distanceFromPlanet = distanceFromPlanet;
+        this.speed = speed;
+        this.diameter = diameter;
+        this.color = color;
+        this.angle = 0;
     }
 
+    public void update_moon(SolarSystem milkyway, planets planet) {
+        this.angle = angle + (1 * speed) / 10;
+        double centreOfRotationDistance = planet.getDistance();
+        double centreOfRotationAngle = planet.getAngle();
+        milkyway.drawSolarObjectAbout(distanceFromPlanet, angle, diameter, color, centreOfRotationDistance, centreOfRotationAngle);
+    }
 }
