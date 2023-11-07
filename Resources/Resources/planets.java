@@ -2,11 +2,11 @@ public class planets {
     private String name;
     private Integer distance;
     private float speed;
-    private Integer diameter;
+    private double diameter;
     private String color;
     private float angle;
 
-    public planets(String name, Integer distance, float speed, Integer diameter, String color) {
+    public planets(String name, Integer distance, float speed, double diameter, String color) {
         this.name = name;
         this.distance = distance;
         this.speed = speed;

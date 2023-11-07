@@ -1,3 +1,7 @@
+/**
+ * This class handles the creation of moons and or any other objects that obit around other planets
+ * @author Curtis grimbaldeston
+*/
 public class moons {
     private Integer distanceFromPlanet;
     private float speed;
